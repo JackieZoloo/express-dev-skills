@@ -1,21 +1,15 @@
-var express = require('express');
-var router = express.Router();
-var skillCrtl = require('../controllers/skills');
+const express = require("express");
+const router = express.Router();
+const skillsCtrl = require("../controllers/skills");
 
-// GET /todos
-router.get('/', skillCrtl.index);
-// GET /todos/new   to see a new todo form 
-router.get('/new', skillCrtl.new);
-// GET /todos/:id
-router.get('/:id', skillCrtl.show);
-// GET /todos/:id/edit
-router.get('/:id/edit', skillCrtl.edit);
-// POST /todos
-router.post('/', skillCrtl.create);
-// DELETE /todos/:id
-router.delete('/:id', skillCrtl.delete);
-// PUT /todos/:id
-// router.put('/:id', skillCrtl.update);
+router.get('/', skillsCtrl.index);
+router.get("/new", skillsCtrl.new);
+router.get("/:id", skillsCtrl.show);
+router.get("/:id/edit", skillsCtrl.edit);
+router.post("/", skillsCtrl.create);
+router.delete("/:id", skillsCtrl.delete);
+// router.put("/:id", skillsCtrl.update);
+
 
 
 module.exports = router;
